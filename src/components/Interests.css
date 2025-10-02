@@ -1,0 +1,365 @@
+/* Interests Section Styling */
+#interests {
+  padding: 80px 0;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+#interests::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #9b59b6, #8e44ad);
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #2c3e50;
+  margin-bottom: 60px;
+  position: relative;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, #9b59b6, #8e44ad);
+  border-radius: 2px;
+}
+
+/* Main Card Container */
+#interests .card {
+  background: linear-gradient(145deg, #ffffff, #f8f9fa);
+  border-radius: 25px;
+  padding: 60px 40px;
+  box-shadow: 
+    0 20px 60px rgba(0, 0, 0, 0.1),
+    0 8px 30px rgba(155, 89, 182, 0.15);
+  border: none;
+  max-width: 1000px;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(155, 89, 182, 0.1);
+}
+
+#interests .card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 5px;
+  background: linear-gradient(90deg, #9b59b6, #8e44ad, #9b59b6);
+  background-size: 200% 100%;
+  animation: shimmer 3s infinite linear;
+}
+
+/* Interests Grid Layout */
+.interests-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 50px;
+  align-items: start;
+}
+
+/* Interest Item Styling */
+.interest-item {
+  text-align: center;
+  padding: 40px 30px;
+  border-radius: 20px;
+  background: linear-gradient(135deg, #ffffff, #fafafa);
+  box-shadow: 
+    0 10px 30px rgba(0, 0, 0, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.8);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(155, 89, 182, 0.1);
+}
+
+.interest-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(155, 89, 182, 0.05), transparent);
+  transition: left 0.6s ease;
+}
+
+.interest-item:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 
+    0 25px 50px rgba(0, 0, 0, 0.15),
+    0 15px 35px rgba(155, 89, 182, 0.2);
+}
+
+.interest-item:hover::before {
+  left: 100%;
+}
+
+/* Icon Styling */
+.interest-item::after {
+  content: '';
+  position: absolute;
+  top: -50px;
+  right: -50px;
+  width: 100px;
+  height: 100px;
+  background: linear-gradient(135deg, rgba(155, 89, 182, 0.1), rgba(142, 68, 173, 0.05));
+  border-radius: 50%;
+  transition: all 0.4s ease;
+}
+
+.interest-item:hover::after {
+  transform: scale(1.2);
+  opacity: 0.8;
+}
+
+/* Interest Title */
+.interest-item h3 {
+  color: #9b59b6 !important;
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 20px !important;
+  position: relative;
+  padding-bottom: 15px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.interest-item h3::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 3px;
+  background: linear-gradient(90deg, #9b59b6, #8e44ad);
+  border-radius: 2px;
+  transition: width 0.3s ease;
+}
+
+.interest-item:hover h3::after {
+  width: 80px;
+}
+
+/* Interest Description */
+.interest-item p {
+  color: #666 !important;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin-bottom: 0;
+  position: relative;
+  z-index: 2;
+  font-weight: 400;
+}
+
+/* Specific Interest Styling */
+.interest-item:nth-child(1) {
+  background: linear-gradient(135deg, #ffffff, #fef7ff);
+}
+
+.interest-item:nth-child(1) h3 {
+  color: #e74c3c !important;
+}
+
+.interest-item:nth-child(1) h3::after {
+  background: linear-gradient(90deg, #e74c3c, #c0392b);
+}
+
+.interest-item:nth-child(1)::after {
+  background: linear-gradient(135deg, rgba(231, 76, 60, 0.1), rgba(192, 57, 43, 0.05));
+}
+
+.interest-item:nth-child(2) {
+  background: linear-gradient(135deg, #ffffff, #f7f9ff);
+}
+
+.interest-item:nth-child(2) h3 {
+  color: #3498db !important;
+}
+
+.interest-item:nth-child(2) h3::after {
+  background: linear-gradient(90deg, #3498db, #2980b9);
+}
+
+.interest-item:nth-child(2)::after {
+  background: linear-gradient(135deg, rgba(52, 152, 219, 0.1), rgba(41, 128, 185, 0.05));
+}
+
+/* Animation Keyframes */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Animation Classes */
+.interest-item {
+  animation: fadeInUp 0.8s ease forwards;
+  opacity: 0;
+}
+
+.interest-item:nth-child(1) {
+  animation-delay: 0.2s;
+}
+
+.interest-item:nth-child(2) {
+  animation-delay: 0.4s;
+}
+
+.interest-item:hover {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Decorative Elements */
+#interests::after {
+  content: '';
+  position: absolute;
+  bottom: -100px;
+  right: -100px;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, rgba(155, 89, 182, 0.1) 0%, transparent 70%);
+  border-radius: 50%;
+  z-index: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  #interests {
+    padding: 60px 0;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+    margin-bottom: 40px;
+  }
+  
+  #interests .card {
+    padding: 40px 25px;
+    margin: 0 15px;
+  }
+  
+  .interests-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  
+  .interest-item {
+    padding: 30px 20px;
+  }
+  
+  .interest-item:hover {
+    transform: translateY(-5px);
+  }
+  
+  .interest-item h3 {
+    font-size: 1.5rem;
+  }
+  
+  .interest-item p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-title {
+    font-size: 1.8rem;
+  }
+  
+  #interests .card {
+    padding: 30px 20px;
+  }
+  
+  .interests-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .interest-item {
+    padding: 25px 15px;
+  }
+  
+  .interest-item h3 {
+    font-size: 1.3rem;
+  }
+}
+
+/* Loading State */
+.interest-item.loading {
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: loading 1.5s infinite;
+}
+
+@keyframes loading {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+/* Print Styles */
+@media print {
+  #interests {
+    background: white !important;
+    padding: 40px 0;
+  }
+  
+  #interests .card {
+    box-shadow: none;
+    border: 1px solid #ddd;
+    padding: 30px 20px;
+  }
+  
+  .interest-item {
+    box-shadow: none;
+    border: 1px solid #eee;
+    break-inside: avoid;
+  }
+  
+  .interest-item:hover {
+    transform: none;
+  }
+}
