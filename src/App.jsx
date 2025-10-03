@@ -10,6 +10,7 @@ import Interests from './components/Interests';
 import Menu from './components/Menu';
 import Contact from './components/Contact';
 import { useScrollAnimation } from './useScrollAnimation';
+// import Men from './components/men'
 
 function App() {
   useScrollAnimation();
@@ -26,6 +27,7 @@ function App() {
       <Languages />
       <Interests />
       <Contact />
+      {/* <Men /> */}
     </div>
   );
 }
